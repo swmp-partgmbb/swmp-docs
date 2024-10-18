@@ -1,0 +1,14 @@
+build/
+.docusaurus/
+node_modules/
+src/
+static/
+
+babel.config.js
+docusaurus.config.ts
+package-lock.json
+package.json
+README.md
+sidebars.ts
+tsconfig.json
+
