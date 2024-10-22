@@ -7,7 +7,7 @@ const config: Config = {
   favicon: 'img/logo.svg',
 
   url: 'https://swmp-partgmbb.github.io',
-  baseUrl: '/',
+  baseUrl: '/swmp-docs',
 
   organizationName: 'swmp-partgmbb.github.io',
   projectName: 'swmp-docs',
