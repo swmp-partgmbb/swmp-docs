@@ -1,4 +1,3 @@
-.github/workflows/test-deploy.yml
 name: Test deployment
 
 on:

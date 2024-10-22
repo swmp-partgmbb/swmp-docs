@@ -1,4 +1,3 @@
-.github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
@@ -29,10 +28,9 @@ jobs:
         with:
           path: build
 
-  deploy:
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-        publish_branch: gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
