@@ -6,10 +6,10 @@ const config: Config = {
   title: 'Documentation',
   favicon: 'img/logo.svg',
 
-  url: 'https://swmp.eu/',
+  url: 'https://swmp-partgmbb.github.io',
   baseUrl: '/',
 
-  organizationName: 'swmp-partgmbb',
+  organizationName: 'swmp-partgmbb.github.io',
   projectName: 'swmp-docs',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
