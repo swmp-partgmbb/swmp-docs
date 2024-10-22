@@ -9,6 +9,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <header className={clsx('hero hero--secondary', styles.heroBanner)}>
       <div className="container">
@@ -31,8 +32,8 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   return (
     <Layout
-      title={`SWMP Documentation`}
-      description="SWMP Documentation">
+      title={`SWMP`}
+      description="SWMP">
       <HomepageHeader />
       <main>
         <Slider />

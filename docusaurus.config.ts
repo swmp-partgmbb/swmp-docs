@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'SWMP RAG Chatbot',
-  favicon: 'img/favicon.ico',
+  title: 'Documentation',
+  favicon: 'img/logo.svg',
 
   url: 'https://swmp.eu/',
   baseUrl: '/',
