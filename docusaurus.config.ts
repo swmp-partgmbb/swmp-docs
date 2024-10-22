@@ -9,8 +9,10 @@ const config: Config = {
   url: 'https://swmp.eu/',
   baseUrl: '/',
 
-  organizationName: 'SWMP',
-  projectName: 'RAG-chat-bot',
+  organizationName: 'swmp-partgmbb',
+  projectName: 'swmp-docs',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
