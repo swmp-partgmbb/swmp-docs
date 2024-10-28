@@ -29,19 +29,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/swmp-partgmbb/swmp-docs/blob/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -51,7 +39,24 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    // algolia: {
+    //   appId: '4DFW8LS9R2',
+    //   apiKey: 'c484b7c9b5712b904af2aaf3788606af',
+    //   indexName: 'swmp-docs',
+
+    //   contextualSearch: true,
+    //   externalUrlRegex: 'swmp-partgmbb\\.github\\.io',
+
+    //   replaceSearchResultPathname: {
+    //     from: '/docs/',
+    //     to: '/',
+    //   },
+
+    //   searchPagePath: 'search',
+
+    //   insights: false,
+    // },
+    image: 'img/logo.svg',
     navbar: {
       logo: {
         src: 'img/logo.svg',
@@ -61,12 +66,12 @@ const config: Config = {
         {
           className: 'button button--lg home',
           position: 'left',
-          label: 'Startseite',
+          label: 'Home',
           to: '/',
         },
         {
           type: 'dropdown',
-          label: 'Anleitung',
+          label: 'Docs',
           position: 'left',
           items: [
             {

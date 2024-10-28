@@ -31,23 +31,23 @@ OPENAI_API_KEY=Ihr_API_Schlüssel_hier
 
 ### Datenvorverarbeitung
 Um die Dokumente für das RAG-System vorzuverarbeiten:
-1. Platzieren Sie Ihre PDF-Dokumente im Verzeichnis backend/data/raw.
-2. Führen Sie das Vorverarbeitungsskript aus:
+1. Platziere die PDF-Dokumente im Verzeichnis backend/data/raw.
+2. Führe das Vorverarbeitungsskript aus:
 ```
 cd backend
 ./preprocess.cmd
 ```
 
 ### Starten der Anwendung
-1. Starten Sie beide Server (Frontend und Backend) durch Ausführen dieses Skripts:
+1. Starte beide Server (Frontend und Backend) durch Ausführen dieses Skripts:
 ```
 ./run.cmd
 ```
-2. Öffnen Sie Ihren Browser und navigieren Sie zu `http://localhost:5173` (oder der von Vite angegebenen URL).
+2. Öffne deinen Browser und navigiere zu `http://localhost:5173` (oder der von Vite angegebenen URL).
 
 ### Verwendung
-1. Registrieren Sie sich für ein neues Konto oder melden Sie sich mit bestehenden Anmeldedaten an.
-2. Nach der Anmeldung werden Sie zur Chat-Oberfläche weitergeleitet.
-3. Geben Sie Ihre Fragen in die Chat-Eingabe ein und drücken Sie Enter oder klicken Sie auf die Senden-Schaltfläche.
-4. Passen Sie die Einstellungen nach Bedarf an (Modellauswahl, Datenbanknutzung, Anzahl relevanter Dokumente).
-5. Sehen Sie sich die KI-generierten Antworten im Chat-Fenster an.
+1. Registriere dich für ein neues Konto oder melde dich mit bestehenden Anmeldedaten an.
+2. Nach der Anmeldung wirst du zur Chat-Oberfläche weitergeleitet.
+3. Gib deine Fragen in die Chat-Eingabe ein und drücke Enter oder klicke auf die Senden-Schaltfläche.
+4. Passen die Einstellungen nach Bedarf an (Modellauswahl, Datenbanknutzung, Anzahl relevanter Dokumente).
+5. Sehe dir die KI-generierten Antworten im Chat-Fenster an.
