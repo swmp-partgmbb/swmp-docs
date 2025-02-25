@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrag_chat_bot_docs=self.webpackChunkrag_chat_bot_docs||[]).push([[59],{5940:t=>{t.exports=JSON.parse('{"metadata":{"permalink":"/swmp-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
