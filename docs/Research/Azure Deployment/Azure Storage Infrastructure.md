@@ -1,20 +1,22 @@
 ---
 id: azure-storage-infrastructure
 title: "Azure Storage Infrastructure"
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Azure Storage Infrastructure
 
-Das System nutzt Azure Storage Account für die Speicherung und Verwaltung von Dokumenten und Metadaten. Der Dokumentenverarbeitungsprozess umfasst mehrere Schritte:
+Das System nutzt Azure Storage Account für die Speicherung und Verwaltung von Dokumenten
+und Metadaten.
 
-- **PDF-Upload über das Frontend**: Der Benutzer lädt ein PDF-Dokument hoch, das an das Backend zur Verarbeitung weitergeleitet wird.
-- **Dokumentenverarbeitung im Backend**:
-  - Das PDF wird analysiert, und der Text extrahiert.
-  - Der extrahierte Text wird in kleinere Chunks segmentiert.
-  - Es wird ein Hash-Wert für das Dokument generiert, um Änderungen zu erkennen.
-- **Speicherung in Azure Storage**:
-  - Die ursprüngliche PDF-Datei wird im Blob Storage (Container: files) gespeichert.
-  - Die Base64-kodierte Version wird im Blob Storage (Container: base64) abgelegt.
-  - Die Dokumentenliste (Name, ID, Metadaten) wird in Table Storage (list) gespeichert.
-  - Vektorrepräsentationen der extrahierten Inhalte werden mit einer Base64-Referenz in Table Storage (vectors) gespeichert.
+Der Benutzer lädt ein PDF-Dokument über das Frontend hoch, das anschließend zur Verarbeitung
+an das Backend weitergeleitet wird. Im Backend wird das PDF analysiert, wobei der
+Text extrahiert und in kleinere Chunks segmentiert wird. Zusätzlich wird ein Hash-Wert für das
+Dokument generiert, um spätere Änderungen erkennen zu können.
+
+Nach der Verarbeitung erfolgt die Speicherung der Daten in Azure Storage. Die ur-
+sprüngliche PDF-Datei wird im Blob Storage unter dem Container „files“ abgelegt, während eine
+Base64-kodierte Version im Container „base64“ gespeichert wird. Die Dokumentenliste, bestehend
+aus Name, ID, Metadaten etc., wird in Table Storage unter „list“ verwaltet. Darüber hinaus werden
+Vektorrepräsentationen der extrahierten Inhalte erzeugt und mit einer Base64-Referenz in Table
+Storage im Bereich „vectors“ abgelegt.

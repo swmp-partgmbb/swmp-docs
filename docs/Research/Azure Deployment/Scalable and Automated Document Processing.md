@@ -1,7 +1,7 @@
 ---
 id: scalable-and-automated-document-processing
 title: "Scalable and Automated Document Processing"
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Scalable and Automated Document Processing

@@ -6,7 +6,7 @@ import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'Documentation',
-  favicon: 'img/logo.svg',
+  favicon: 'img/logo_mini.svg',
 
   url: 'https://swmp-partgmbb.github.io',
   baseUrl: '/swmp-docs',
@@ -63,16 +63,10 @@ const config: Config = {
     image: 'img/logo.svg',
     navbar: {
       logo: {
-        src: 'img/logo.svg',
-        href: 'https://swmp.eu/',
+        src: 'img/logo.svg', 
+        href: '/',
       },
       items: [
-        {
-          className: 'button button--lg home',
-          position: 'left',
-          label: 'Home',
-          to: '/',
-        },
         {
           type: 'dropdown',
           label: 'Docs',
@@ -88,10 +82,10 @@ const config: Config = {
             },
           ],
         },
-        {
-          type: 'localeDropdown',
-          position: 'right',
-        },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
         {
           href: "https://github.com/nmkzzztos/RAG_project",
           position: "right",
@@ -108,12 +102,8 @@ const config: Config = {
           items: [
             {
               label: 'App',
-              href: 'https://github.com/nmkzzztos/RAG_project',
+              href: 'https://ambitious-meadow-029586f03.5.azurestaticapps.net/',
             },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/nmkzzztos/RAG_project',
-            }
           ],
         },
         {
@@ -158,7 +148,7 @@ const config: Config = {
       logo: {
         className: 'footer-logo',
         alt: 'SWMP Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo_swmp.svg',
         width: 150,
         href: 'https://swmp.eu/',
       },

@@ -1,6 +1,6 @@
 # Chat
 
-Die **SWMP AI Support Assistent**-Anwendung ist ein KI-gestütztes Chatsystem, das speziell entwickelt wurde, um die Mitarbeiter der Kanzlei SWMP effizient zu unterstützen. Die Anwendung bietet eine benutzerfreundliche Oberfläche, die es ermöglicht, Fragen zu stellen und präzise, fundierte und verständliche Antworten zu erhalten.
+**SWAMPI** - ist ein KI-gestütztes Chatsystem, das speziell entwickelt wurde, um die Mitarbeiter der Kanzlei SWMP effizient zu unterstützen. Die Anwendung bietet eine benutzerfreundliche Oberfläche, die es ermöglicht, Fragen zu stellen und präzise, fundierte und verständliche Antworten zu erhalten.
 
 ![SWMP AI Support Assistent](img/home.png)
 
@@ -10,7 +10,8 @@ Um Antworten zu generieren, greift der Chatbot auf die Dokumente der Kanzlei SWM
 
 Um mit dem Chatbot zu interagieren:
 1. Gib deine Nachricht in das Nachrichtenfeld ein.
-2. Klicke auf die Schaltfläche „Senden“ auf der rechten Seite.
+2. Oder klicke auf die Schaltfläche „Mikrofon“, um deine Nachricht aufzunehmen.
+3. Dann klicke auf die Schaltfläche „Senden“ auf der rechten Seite.
 
 ![SWMP AI Support Assistent](img/messagebox.png)
 
@@ -50,17 +51,16 @@ Die Sidebar erscheint links mit allen gespeicherten Chats.
 
 :::note
 
-1. Um einen neuen Chat zu starten, klicke auf das Chat-Symbol (oben Mitte).
-2. Um gespeicherte Chats anzusehen, wähle einen Chat aus der Liste aus.
-3. Um einen Chat zu löschen, klicke auf das Papierkorb-Symbol neben dem entsprechenden Chat.
+1. Um einen neuen Chat zu starten, klicke auf das Chat-Symbol.
+2. Um die alle gespeicherte [Quellen](docs/Benutzer/04_quellen.md) anzusehen, klicke auf das Symbol „Quellen“.
+3. Um gespeicherte Chats anzusehen, wähle einen Chat aus der Liste aus.
+   - Um einen Chat zu löschen, klicke auf das Papierkorb-Symbol neben dem entsprechenden Chat.
 
 :::
 
 ### Fehlermeldungen
 
 Falls eine Anfrage nicht korrekt verarbeitet wird, erhältst du eine Fehlermeldung (z. B. „Error“).
-
-![SWMP AI Support Assistent](img/error.png)
 
 Wie du Fehlermeldungen melden kannst, erfährst du im Abschnitt zur [Rückmeldung](docs/Benutzer/03_feedback.md).
 
