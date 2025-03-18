@@ -52,7 +52,7 @@ Die Sidebar erscheint links mit allen gespeicherten Chats.
 :::note
 
 1. Um einen neuen Chat zu starten, klicke auf das Chat-Symbol.
-2. Um die alle gespeicherte [Quellen](docs/Benutzer/04_quellen.md) anzusehen, klicke auf das Symbol „Quellen“.
+2. Um die alle gespeicherte [Quellen](docs/Benutzer/04_sources.md) anzusehen, klicke auf das Symbol „Quellen“.
 3. Um gespeicherte Chats anzusehen, wähle einen Chat aus der Liste aus.
    - Um einen Chat zu löschen, klicke auf das Papierkorb-Symbol neben dem entsprechenden Chat.
 
