@@ -34,6 +34,7 @@ const config: Config = {
             'https://github.com/swmp-partgmbb/swmp-docs/blob/main',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          sidebarCollapsed: false,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -43,55 +44,28 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // algolia: {
-    //   appId: '4DFW8LS9R2',
-    //   apiKey: 'c484b7c9b5712b904af2aaf3788606af',
-    //   indexName: 'swmp-docs',
-
-    //   contextualSearch: true,
-    //   externalUrlRegex: 'swmp-partgmbb\\.github\\.io',
-
-    //   replaceSearchResultPathname: {
-    //     from: '/docs/',
-    //     to: '/',
-    //   },
-
-    //   searchPagePath: 'search',
-
-    //   insights: false,
-    // },
     image: 'img/logo.svg',
     navbar: {
       logo: {
-        src: 'img/logo.svg', 
+        src: 'img/logo_mini_color.svg',
         href: '/',
       },
       items: [
         {
-          type: 'dropdown',
-          label: 'Docs',
+          label: 'Documentation',
           position: 'left',
-          items: [
-            {
-              label: 'Benutzer',
-              to: '/docs/Benutzer/introduction',
-            },
-            {
-              label: 'Entwickler',
-              to: '/docs/Entwickler/introduction',
-            },
-          ],
+          href: '/docs/Benutzer/introduction',
         },
         // {
         //   type: 'localeDropdown',
         //   position: 'right',
         // },
-        {
-          href: "https://github.com/nmkzzztos/RAG_project",
-          position: "right",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
-        },
+        // {
+        //   href: "https://github.com/nmkzzztos/RAG_project",
+        //   position: "right",
+        //   className: "header-github-link",
+        //   "aria-label": "GitHub repository",
+        // },
       ],
     },
     footer: {

@@ -3,20 +3,65 @@
  * and scoped locally.
  */
 
+:root {
+  --primary-color: #ff6900;
+  --accent-color: #ff6900;
+  
+  --dark-theme-bg: #040413;
+  --dark-theme-alternate-bg: #00021f;
+  --dark-theme-card-bg: #040413;
+  --dark-theme-border-color: #2D3748;
+  --dark-theme-text-primary: #F8FAFC;
+  --dark-theme-text-secondary: #94A3B8;
+  
+  --light-theme-bg: #f0f0f0;
+  --light-theme-alternate-bg: #e8e8e8;
+  --light-theme-card-bg: #ffffff;
+  --light-theme-border-color: #e2e8f0;
+  --light-theme-text-primary: #1e293b;
+  --light-theme-text-secondary: #475569;
+  
+  --secondary-color: #ffffff;
+  --bg-color: var(--dark-theme-bg);
+  --alternate-bg: var(--dark-theme-alternate-bg);
+  --card-bg: var(--dark-theme-card-bg);
+  --border-color: var(--dark-theme-border-color);
+  --text-primary: var(--dark-theme-text-primary);
+  --text-secondary: var(--dark-theme-text-secondary);
+  --highlight: #3563E9;
+}
+
+html[data-theme='light'] {
+  --secondary-color: #1e293b;
+  --bg-color: var(--light-theme-bg);
+  --alternate-bg: var(--light-theme-alternate-bg);
+  --card-bg: var(--light-theme-card-bg);
+  --border-color: var(--light-theme-border-color);
+  --text-primary: var(--light-theme-text-primary);
+  --text-secondary: var(--light-theme-text-secondary);
+}
+
 .navbar__brand {
   margin-left: 0;
 }
 
+.navbar__logo img {
+  height: 150px;
+}
+
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
 }
 
@@ -24,4 +69,339 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+.featureBlock {
+  padding: 5rem 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.alternateBlock {
+  background-color: var(--alternate-bg);
+}
+
+.featureContent {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.highlight {
+  color: #fff;
+}
+
+[data-theme="light"] .highlight {
+  color: #000338;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageColumn img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+.featureDescription {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.featurePoints {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.featurePoints li {
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.featurePoints li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.ctaButton {
+  margin-top: 2rem;
+}
+
+/* Стили для блока безопасности */
+.securityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.securityItem {
+  background-color: var(--card-bg);
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.securityItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.securityItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.securityItem p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 996px) {
+  .featureContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .textColumn, .imageColumn {
+    max-width: 100%;
+  }
+  
+  /* Чередование порядка элементов в мобильном представлении */
+  .alternateBlock .featureContent {
+    flex-direction: column-reverse;
+  }
+  
+  .securityGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featureBlock {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Стили для кнопок в светлой/темной теме */
+html[data-theme='light'] .button--primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+html[data-theme='light'] .button--secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+html[data-theme='light'] .button--secondary:hover {
+  background-color: rgba(255, 105, 0, 0.1);
+}
+
+/* Анимации появления при прокрутке */
+.fadeInSection {
+  opacity: 0;
+  transform: translateY(30px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+  will-change: opacity, transform, visibility;
+}
+
+.fadeInSection.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.staggeredItem {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition-delay: calc(var(--item-index) * 100ms);
+  will-change: opacity, transform;
+}
+
+.staggeredItem.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Разные анимации для чередующихся блоков */
+.slideInLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.slideInLeft.isVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideInRight {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.slideInRight.isVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Анимация для сетки безопасности */
+.scaleIn {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition-delay: calc(var(--item-index) * 150ms);
+  will-change: opacity, transform;
+}
+
+.scaleIn.isVisible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Добавляем стили для секции безопасности на всю ширину */
+.fullWidthSection .featureContent {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.fullWidth {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+/* Расширяем сетку безопасности для полноэкранного режима */
+.securityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Адаптивная сетка безопасности для разных размеров экрана */
+@media screen and (min-width: 1200px) {
+  .securityGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .securityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .securityGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Добавляем стили для dualImageContainer */
+.dualImageContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primaryImage {
+  width: 80%;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.secondaryImage {
+  width: 70%; 
+  max-width: 350px;
+  margin-top: -10%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .dualImageContainer {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .primaryImage, .secondaryImage {
+    width: 60%;
+    margin-top: 0;
+  }
+}
+
+/* Стили для иконок в секции безопасности */
+.securityHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.securityIcon {
+  width: 24px;
+  height: 24px;
+  filter: invert(29%) sepia(98%) saturate(1929%) hue-rotate(21deg) brightness(99%) contrast(104%);
+  flex-shrink: 0;
+}
+
+html[data-theme='dark'] .securityIcon {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(92%) saturate(1954%) hue-rotate(360deg) brightness(100%) contrast(107%);
+}
+
+.securityItem h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--primary-color);
 }

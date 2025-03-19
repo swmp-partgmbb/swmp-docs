@@ -51,7 +51,7 @@ Eine größere Anzahl von Dokumenten kann zu allgemeineren Antworten führen, da
 
 Wenn du Datenbank-Suche verwendest, kannst du zwischen internen und externen Quellen wählen.
 
-![SWMP AI Support Assistent ](img/databases.png)
+![SWMP AI Support Assistent](img/databases.png)
 
 * **Kanzlei Wissensarchiv**: Hier werden Daten (Organisationshandbuch, Anleitung DRACOON, Konzept MS Teams, etc.) abgelegt, die unseren Mitarbeitenden zur Verfügung stehen.
 
