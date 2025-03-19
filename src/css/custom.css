@@ -213,6 +213,10 @@ math[display="inline"] {
   letter-spacing: 0.05em;
 }
 
+[data-theme="light"] .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  color: #000;
+}
+
 .theme-doc-sidebar-item-link-level-2 > .menu__link,
 .theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible > .menu__link {
   padding: 0.3rem 0.75rem 0.3rem 1.5rem;
