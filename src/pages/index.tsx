@@ -69,8 +69,7 @@ export default function Home(): JSX.Element {
             <div className={styles.featureContent}>
             <div className={`${styles.imageColumn} ${styles.slideInLeft}`}>
                 <div className={styles.dualImageContainer}>
-                  <img src="img/data-integration.png" alt="Datenintegration" className={styles.primaryImage} />
-                  <img src="img/ai-technology.png" alt="KI-Technologien" className={styles.secondaryImage} />
+                  <img src="img/data-integration.svg" alt="Datenintegration" className={styles.primaryImage} />
                 </div>
               </div>
               <div className={`${styles.textColumn} ${styles.fadeInSection}`}>

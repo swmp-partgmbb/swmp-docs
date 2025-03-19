@@ -107,6 +107,22 @@
   background-color: #060039;
 }
 
+[data-theme="light"] .footer {
+  background-color: #1a1d56;
+}
+
+/* [data-theme="light"] .footer__title {
+  color: #060039;
+}
+
+[data-theme="light"] .footer__link-item {
+  color: #060039;
+}
+
+[data-theme="light"] .footer__copyright {
+  color: #060039;
+} */
+
 [data-theme="dark"] .hero--secondary {
   background-color: #1a1d56;
   color: var(--ifm-color-primary);
