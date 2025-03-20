@@ -19,6 +19,7 @@
     "@docusaurus/preset-classic": "3.5.2",
     "@docusaurus/theme-classic": "^3.5.2",
     "@docusaurus/theme-search-algolia": "^3.5.2",
+    "@easyops-cn/docusaurus-search-local": "^0.49.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "meilisearch-docsearch": "^0.7.0",

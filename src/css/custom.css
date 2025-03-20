@@ -294,3 +294,61 @@ math[display="inline"] {
 .markdown h2 {
   padding-bottom: 0.5rem;
 }
+
+/* Footer social links styles */
+.footer {
+  padding: 10px;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--ifm-color-primary-dark);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.footer-social-links a:hover {
+  color: var(--ifm-color-primary);
+  transform: translateY(-3px);
+}
+
+.footer-social-links svg {
+  width: 30px;
+  height: 30px;
+}
+
+[data-theme="light"] .footer-social-links a {
+  color: var(--ifm-color-primary-dark);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .footer-social-links a:hover {
+  color: var(--ifm-color-primary);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer__logo {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .footer__col {
+    margin-bottom: 10px;
+  }
+
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}

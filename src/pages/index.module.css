@@ -207,7 +207,7 @@ html[data-theme='light'] {
   }
   
   .textColumn, .imageColumn {
-    max-width: 100%;
+    min-width: 100%;
   }
   
   /* Чередование порядка элементов в мобильном представлении */

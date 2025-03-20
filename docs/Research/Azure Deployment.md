@@ -14,13 +14,7 @@ Webanwendungen und KI-gestützten Systemen bietet. Die Hauptkomponenten der Depl
 Architektur umfassen das Frontend, das Backend, das Scraper, die Datenverarbeitung sowie die
 Dokumentensynchronisation.
 
-<ThemedImage
-  alt="Docusaurus themed image"
-  sources={{
-    light: useBaseUrl('/img/preprocessing.png'),
-    dark: useBaseUrl('/img/preprocessing.png'),
-  }}
-/>;
+[![](img/azure_deployment.png)](img/azure_deployment.png)
 *Abb. 1: diese Architektur stellt eine moderne Webanwendung dar, die auf einer Cloud-Infrastruktur basiert. Sie kombiniert ein leistungsstarkes Frontend (Vue.js, TypeScript) mit einem skalierbaren Backend (Flask, Python) und nutzt Azure-Dienste zur Hosting der Anwandung und Verarbeitung, Speicherung und Analyse von Daten. Externe LLMs und Scraping-Dienste erweitern die Funktionalität der Anwendung.*
 
 Das Frontend wird als Azure Static Web App gehostet und nutzt GitHub Actions für automatisierte

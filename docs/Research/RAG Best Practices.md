@@ -120,9 +120,9 @@ Zwischen kommerziellen Modellen (Tab. 1) bietet GPT-4o hohe Leistung mit guter D
 
 | Model                       | MMLU             | GPQA             | Price (1M Input, 1M Output)         | Enterprise Privacy             |
 |-----------------------------|------------------|------------------|-------------------------------------|--------------------------------|
-| GPT-4o / GPT-4o-mini       | 88.7 / 82.0      | 53.6 / 40.2      | $5.00, $15.00 / $0.15, $0.60       | Ja        |
-| Claude 3.5 Sonnet / Claude 3 Haiku | 88.7 / 75.2  | 59.4 / 33.3      | $3.00, $15.00 / $0.25, $1.25       | Fraglich |
-| Gemini 1.5 PRO / Gemini 1.5 Flash | 85.9 / 78.9 | 46.2 / 39.5      | $3.50, $10.50 / $0.075, $0.30      | Eher nein |
+| GPT-4o / GPT-4o-mini       | 88.7 / 82.0      | 53.6 / 40.2      | \$5.00, \$15.00 / \$0.15, \$0.60       | Ja        |
+| Claude 3.5 Sonnet / Claude 3 Haiku | 88.7 / 75.2  | 59.4 / 33.3      | \$3.00, \$15.00 / \$0.25, \$1.25       | Fraglich |
+| Gemini 1.5 PRO / Gemini 1.5 Flash | 85.9 / 78.9 | 46.2 / 39.5      | \$3.50, \$10.50 / \$0.075, \$0.30      | Eher nein |
 
 *Table 1: Closed-Source Modelle*
 
