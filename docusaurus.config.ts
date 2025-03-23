@@ -70,7 +70,7 @@ const config: Config = {
       },
       items: [
         {
-          label: 'Documentation',
+          label: 'Dokumentation',
           position: 'left',
           href: '/docs/Benutzer/introduction',
         },

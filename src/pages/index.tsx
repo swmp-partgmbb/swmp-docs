@@ -138,7 +138,8 @@ export default function Home(): JSX.Element {
                     {
                       iconSrc: "img/icons/privacy.svg",
                       title: 'Datenschutz',
-                      description: 'EU Data Boundary für Azure OpenAI garantiert: Ihre Daten bleiben in der EU, werden streng isoliert und nicht zum LLM-Training verwendet. Sämtliche Anfragen werden ausschließlich in EU-Rechenzentren verarbeitet und von Microsoft-Mitarbeitern im EWR überwacht, mit dedizierter Datenspeicherung im Azure-Tenant.'
+                      // description: 'EU Data Boundary für Azure OpenAI garantiert: Ihre Daten bleiben in der EU, werden streng isoliert und nicht zum LLM-Training verwendet. Sämtliche Anfragen werden ausschließlich in EU-Rechenzentren verarbeitet und von Microsoft-Mitarbeitern im EWR überwacht, mit dedizierter Datenspeicherung im Azure-Tenant.'
+                      description: 'Ihre Daten bleiben in der EU, werden streng isoliert und nicht zum LLM-Training verwendet. Sämtliche Anfragen werden ausschließlich in EU-Rechenzentren verarbeitet und von Microsoft-Mitarbeitern im EWR überwacht, mit dedizierter Datenspeicherung im Azure-Tenant.'
                     }
                   ].map((item, index) => (
                     <div 

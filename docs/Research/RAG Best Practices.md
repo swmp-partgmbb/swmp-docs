@@ -100,7 +100,7 @@ Die Kombination dieser Features führt in der Regel zu besseren Ergebnissen als 
 | HyDE (Hypothetical Document Embeddings)   | 50.87          | **75.44**      | 7.21           | 50.94          | **73.94**      | 2.14           |
 | HyDE + Hybrid Search                       | **52.13**      | 73.34          | 11.16          | **53.13**      | 72.72          | 2.95           |
 
-*Vergleich der Suchmethoden auf TREC DL19 und TREC DL20*
+*Table 3: Vergleich der Suchmethoden auf TREC DL19 und TREC DL20*
 
 ## Large Language Models
 
@@ -124,7 +124,7 @@ Zwischen kommerziellen Modellen (Tab. 1) bietet GPT-4o hohe Leistung mit guter D
 | Claude 3.5 Sonnet / Claude 3 Haiku | 88.7 / 75.2  | 59.4 / 33.3      | \$3.00, \$15.00 / \$0.25, \$1.25       | Fraglich |
 | Gemini 1.5 PRO / Gemini 1.5 Flash | 85.9 / 78.9 | 46.2 / 39.5      | \$3.50, \$10.50 / \$0.075, \$0.30      | Eher nein |
 
-*Table 1: Closed-Source Modelle*
+*Table 4: Closed-Source Modelle*
 
 Bei der Verwendung von Sprachmodellen zur Verarbeitung personenbezogener Daten können Open-Source Modelle (Tab. 2) gewählt werden.
 
@@ -135,7 +135,7 @@ Bei der Verwendung von Sprachmodellen zur Verarbeitung personenbezogener Daten k
 | Mixtral 7B / 8x7B / 8x22B  | 63.0 / 71.0 / 84.0| ---              | 14 GB  / 112 GB / 252 GB | Apache 2.0                     |
 | Qwen2-72B                  | 84.2             | 37.9             | 148 GB                  | Qianwen License                |
 
-*Table 2: Open-Source Modelle*
+*Table 5: Open-Source Modelle*
 
 Open-Source-Modelle bieten eine größere Flexibilität bei der Lizenzierung und Leistung.
 
