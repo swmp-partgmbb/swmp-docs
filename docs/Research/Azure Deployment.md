@@ -121,3 +121,35 @@ Für interne Daten, die für Mitarbeiter relevant sind, erfolgt die Verarbeitung
 *Abb. 6: beschreibt den Ansatz zur Verarbeitung interner Daten über das Microsoft Graph API. Die Quelle der Daten sind Microsoft-Dienste wie Teams, SharePoint und OneDrive, die durch eine API-Schnittstelle abgerufen werden. Die Authentifizierung erfolgt über OAuth 2.0 mit Entra ID, wodurch eine sichere Zugriffskontrolle gewährleistet ist.*
 
 Die Azure Function App kommuniziert über die Graph API mit den jeweiligen Ressourcen und ruft relevante Dokumente ab. Um die Aktualität der Informationen zu gewährleisten, werden Änderungen und neue Inhalte über Änderungsfeeds und Webhooks erkannt und synchronisiert.
+
+## Security and Compliance Considerations
+
+Die Sicherheit der eingesetzten Azure-Dienste ist ein zentraler Bestandteil der Architektur des SWMP-Chat-Systems. Durch den gezielten Einsatz moderner Sicherheitsmechanismen (Abb. 7) wird die Vertraulichkeit, Integrität und Verfügbarkeit der Daten sichergestellt. Im Folgenden werden die wichtigsten Sicherheitskomponenten im Detail erläutert.
+
+![Light Mode](img/security_and_compliance.png#gh-light-mode-only)
+![Dark Mode](img/security_and_compliance_dark.png#gh-dark-mode-only)
+*Abb. 7: zeigt eine Sicherheitsarchitektur des SWMP-Chat-Systems auf Basis von Microsoft Azure. Es veranschaulicht die Sicherheitsmaßnahmen und den Datenfluss zwischen den wichtigsten Komponenten: Static Web App, App Service, OpenAI Service und Storage.*
+
+### Storage Security
+
+Die Speicherung von Daten erfolgt im Azure Storage und ist sowohl im Ruhezustand als auch während der Übertragung abgesichert. Ruhende Daten werden durch AES256 verschlüsselt – einem international anerkannten symmetrischen Verschlüsselungsstandard mit einer Schlüssellänge von 256 Bit. AES256 gilt als extrem sicher und wird weltweit für sensible Daten, einschließlich staatlicher Informationen, eingesetzt. Die Verschlüsselung erfolgt dabei automatisch auf Speicherebene, ohne dass Benutzer manuell eingreifen müssen.
+
+### Authentication and Authorization
+
+Das Frontend der Anwendung wird als Azure Static Web App bereitgestellt. Die Authentifizierung der Benutzer erfolgt über Microsoft Entra ID, vormals bekannt als Azure Active Directory. Dadurch wird sichergestellt, dass nur registrierte und berechtigte Benutzer Zugriff auf die Anwendung erhalten. Eine zusätzliche Schutzschicht bildet die IP-Adressbeschränkung: Nur Anfragen von autorisierten, vordefinierten IP-Adressen werden zugelassen. Dadurch wird der Zugriff aus nicht vertrauenswürdigen Netzwerken effektiv unterbunden und die Angriffsfläche minimiert.
+
+### Data Encryption, TLS configuration and CORS
+
+Das Backend-System ist im Azure App Service gehostet und kommuniziert ausschließlich über sichere HTTPS-Verbindungen mit TLS 1.2. Dieses Protokoll schützt vor typischen Angriffsvektoren wie Man-in-the-Middle- oder Replay-Attacken.
+
+Besonders hervorzuheben ist die Konfiguration einer strengen TLS Cipher Suite: Die Anwendung verwendet mindestens die Verschlüsselungssuite TLS-ECDHE-ECDSA-WITH-AES-256-GCM-SHA384. Diese bietet hohe kryptografische Sicherheit durch die Verwendung elliptischer Kurven (ECDHE) für den Schlüsselaustausch, digitale Signaturen (ECDSA) zur Authentifizierung und AES256 im GCM-Modus für vertrauliche, gleichzeitig aber authentifizierte Verschlüsselung.
+
+Zusätzlich wird die Cross-Origin Resource Sharing (CORS)-Konfiguration so eingeschränkt, dass nur Requests von der eigenen Azure Static Web App erlaubt sind. Dadurch wird verhindert, dass externe oder böswillige Domains auf das Backend zugreifen können.
+
+### OpenAI Service Integration
+
+Die Integration des Azure OpenAI Service ermöglicht KI-gestützte Funktionen wie semantische Suche oder Konversationen mit Sprachmodellen. Dabei steht der Schutz sensibler Daten im Vordergrund. Alle Daten, die an den OpenAI-Dienst gesendet werden, verbleiben ausschließlich in Rechenzentren innerhalb der Europäischen Union. Die Datenverarbeitung ist geografisch beschränkt und erfüllt damit strenge Datenschutzanforderungen, insbesondere die der DSGVO.
+
+Darüber hinaus werden Kundendaten strikt isoliert und mandantengetrennt verarbeitet. Das bedeutet, dass jede Organisation in ihrer eigenen, vollständig abgekapselten Azure-Umgebung arbeitet, ohne dass es zu Datenüberlappungen oder Vermischungen kommt. Wichtig ist auch, dass keinerlei Daten, die über den Dienst eingehen, für das Training oder die Verbesserung der zugrunde liegenden Sprachmodelle verwendet werden – die Hoheit über die Inhalte bleibt vollständig beim Kunden.
+
+Schließlich erfolgt die Überwachung der Systeme ausschließlich durch autorisierte Microsoft-Mitarbeitende innerhalb des Europäischen Wirtschaftsraums (EWR). Dies stellt sicher, dass auch im Betrieb nur datenschutzkonforme Prozesse und Verfahren zum Einsatz kommen.

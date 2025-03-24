@@ -123,23 +123,17 @@ export default function Home(): JSX.Element {
                     {
                       iconSrc: "img/icons/authentication.svg",
                       title: 'Authentifizierung & Zugriffskontrolle',
-                      description: 'Enterprise-Integration mit Microsoft Entra ID und Multifaktor-Authentifizierung schützen vor unbefugtem Zugriff auf alle Systemkomponenten.'
+                      description: 'Microsoft Entra ID Integration mit IP-Adressbeschränkung und Multi-Faktor-Authentifizierung schützt vor unbefugtem Zugriff. Nur Anfragen von autorisierten IP-Adressen werden zugelassen.'
                     },
                     {
                       iconSrc: "img/icons/encryption.svg",
                       title: 'Datenverschlüsselung',
-                      description: 'HTTPS/TLS 1.2+ für die Übertragung und AES-256 für ruhende Daten gewährleisten End-to-End-Schutz aller sensiblen Informationen.'
+                      description: 'AES-256 für ruhende Daten und HTTPS/TLS 1.2+ mit strenger TLS Cipher Suite für die Datenübertragung bieten maximalen Schutz.'
                     },
-                    // {
-                    //   iconSrc: "/img/icons/network-icon.svg",
-                    //   title: 'Netzwerksicherheit',
-                    //   description: 'Mehrschichtige Netzwerkarchitektur mit Private Link-Integrationen, automatisiertem DDoS-Schutz und Web Application Firewall (WAF) garantieren sichere Kommunikation zwischen allen Komponenten.'
-                    // },
                     {
                       iconSrc: "img/icons/privacy.svg",
                       title: 'Datenschutz',
-                      // description: 'EU Data Boundary für Azure OpenAI garantiert: Ihre Daten bleiben in der EU, werden streng isoliert und nicht zum LLM-Training verwendet. Sämtliche Anfragen werden ausschließlich in EU-Rechenzentren verarbeitet und von Microsoft-Mitarbeitern im EWR überwacht, mit dedizierter Datenspeicherung im Azure-Tenant.'
-                      description: 'Ihre Daten bleiben in der EU, werden streng isoliert und nicht zum LLM-Training verwendet. Sämtliche Anfragen werden ausschließlich in EU-Rechenzentren verarbeitet und von Microsoft-Mitarbeitern im EWR überwacht, mit dedizierter Datenspeicherung im Azure-Tenant.'
+                      description: 'Alle Daten verbleiben ausschließlich in EU-Rechenzentren, werden mandantengetrennt verarbeitet und nicht zum LLM-Training verwendet. Überwachung erfolgt nur durch autorisierte Microsoft-Mitarbeiter im EWR.'
                     }
                   ].map((item, index) => (
                     <div 
