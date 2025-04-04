@@ -1,4 +1,8 @@
+import StorylaneEmbed from '@site/src/components/HomepageFeatures/liveDemo';
+
 # Chat
+
+<StorylaneEmbed />
 
 **SWAMPI** - ist ein KI-gestütztes Chatsystem, das speziell entwickelt wurde, um die Mitarbeiter der Kanzlei SWMP effizient zu unterstützen. Die Anwendung bietet eine benutzerfreundliche Oberfläche, die es ermöglicht, Fragen zu stellen und präzise, fundierte und verständliche Antworten zu erhalten.
 
