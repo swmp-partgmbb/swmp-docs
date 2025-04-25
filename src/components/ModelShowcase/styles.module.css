@@ -70,7 +70,6 @@
 .modelCard {
     display: flex;
     flex-direction: column;
-    background-color: var(--card-bg, #ffffff);
     border: 1px solid var(--business-border, #e2e8f0);
     border-radius: 8px;
     overflow: hidden;
@@ -84,7 +83,6 @@
 }
 
 [data-theme='dark'] .modelCard {
-    background-color: var(--dark-theme-card-bg, #040413);
     border-color: var(--dark-theme-border-color, #2D3748);
 }
 
