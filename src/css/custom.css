@@ -55,7 +55,7 @@
 }
 
 .main-wrapper {
-  background-color: var(--ifm-alert-background-color-highlight);
+  background-color: var(--bg-color);
 }
 
 .dropdown__menu {
