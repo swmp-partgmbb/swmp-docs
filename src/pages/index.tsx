@@ -7,6 +7,23 @@ import React, { useEffect, useRef } from 'react';
 
 import styles from './index.module.css';
 
+// KI-Modellkarte Komponente
+const AIModelCard = ({ model }) => (
+  <div className={styles.aiModelCard}>
+    <div className={styles.aiModelContent}>
+      <h3>{model.name}</h3>
+      <p>{model.description}</p>
+      {model.features && (
+        <ul className={styles.aiModelFeatures}>
+          {model.features.map((feature, idx) => (
+            <li key={idx}>{feature}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </div>
+);
+
 export default function Home(): JSX.Element {
   const observerRef = useRef(null);
 
@@ -33,6 +50,84 @@ export default function Home(): JSX.Element {
       });
     };
   }, []);
+
+  // Daten für KI-Modelle
+  const aiModels = [
+    {
+      type: 'openai',
+      title: '',
+      logo: 'img/logos/openai-logo.svg',
+      models: [
+        {
+          name: 'GPT-4.1',
+          icon: 'img/logos/openai-logo.svg',
+          description: 'Flaggschiff-Modell mit erweitertem Kontextfenster von bis zu 1 Million Token und verbesserten Reasoning-Fähigkeiten.',
+          features: [
+            '1M Token Kontextfenster',
+            'Verbessertes Verständnis juristischer Dokumente',
+            'Präzise Befolgung komplexer Anweisungen'
+          ]
+        },
+        {
+          name: 'GPT-4.1-Mini',
+          icon: 'img/logos/openai-logo.svg',
+          description: 'Schnelleres Modell mit 1 Million Token Kontextfenster und optimierter Balance zwischen Leistung und Geschwindigkeit.',
+          features: [
+            '1M Token Kontextfenster',
+            'Wissensstand bis Juni 2024',
+            'Verbesserte Qualität bei geringeren Kosten'
+          ]
+        },
+        {
+          name: 'GPT-4.1-Nano',
+          icon: 'img/logos/openai-logo.svg',
+          description: 'Schnellstes und kostengünstigstes Modell der 4.1-Familie mit 1 Million Token Kontextfenster trotz kompakter Größe.',
+          features: [
+            '1M Token Kontextfenster',
+            'Extrem schnell und kostengünstig',
+            'Ideal für Standardaufgaben und Dokumentenvervollständigung'
+          ]
+        }
+      ]
+    },
+    {
+      type: 'perplexity',
+      title: '',
+      logo: 'img/logos/perplexity-logo.svg',
+      models: [
+        {
+          name: 'Sonar',
+          icon: 'img/logos/perplexity-logo.svg',
+          description: 'Spezialisiertes Modell für Internetsuche mit Integration aktueller Informationsquellen in Echtzeit.',
+          features: [
+            'Zugriff auf aktuelle Quellen',
+            'Zitierung und Faktenkontrolle',
+            'Schnelle Antworten zu juristischen Fragen'
+          ]
+        },
+        {
+          name: 'Sonar-Reasoning',
+          icon: 'img/logos/perplexity-logo.svg',
+          description: 'Fortschrittliches Modell für komplexe analytische Aufgaben mit erweiterten Reasoning-Fähigkeiten.',
+          features: [
+            'Vertiefte Analyse komplexer Fragen',
+            'Akademischer Modus für wissenschaftliche Quellen',
+            'Mehrstufige Argumentation'
+          ]
+        },
+        {
+          name: 'Sonar-Deep-Research',
+          icon: 'img/logos/perplexity-logo.svg',
+          description: 'Spezialisiertes Modell für mehrstufige Informationssuche und komplexe Themen mit autonomer Recherchefähigkeit.',
+          features: [
+            'Autonom Dutzende Suchen durchführen',
+            'Analyse Hunderter von Quellen',
+            'Erstellung umfassender, quellenbasierter Berichte'
+          ]
+        }
+      ]
+    }
+  ];
 
   return (
     <Layout
@@ -110,6 +205,37 @@ export default function Home(): JSX.Element {
 
         <section className={`${styles.featureBlock} ${styles.alternateBlock}`}>
           <div className="container">
+            <div className={styles.aiModelShowcase}>
+              <Heading as="h2" className={`${styles.sectionTitle} ${styles.fadeInSection}`}>
+                Fortschrittliche <span className={styles.highlight}>KI-Modelle</span>
+              </Heading>
+              <p className={`${styles.featureDescription} ${styles.fadeInSection}`}>
+                Unser System nutzt die besten KI-Modelle führender Unternehmen
+              </p>
+              
+              {aiModels.map((category, index) => (
+                <div key={index} className={`${styles.aiModelCategory} ${styles.slideInLeft}`}>
+                  <div className={styles.aiModelCategoryHeader}>
+                    <img 
+                      src={category.logo} 
+                      alt={`${category.title} Logo`} 
+                      className={styles.aiModelCategoryLogo} 
+                    />
+                    <h3>{category.title}</h3>
+                  </div>
+                  <div className={styles.aiModelGrid}>
+                    {category.models.map((model, idx) => (
+                      <AIModelCard key={idx} model={model} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.featureBlock}`}>
+          <div className="container">
             <div className={styles.featureContent}>
               <div className={`${styles.textColumn} ${styles.fadeInSection}`}>
                 <Heading as="h2" className={styles.sectionTitle}>
@@ -154,7 +280,7 @@ export default function Home(): JSX.Element {
           </div>
         </section>
 
-        {/* Блок - Преимущества */}
+        {/* Vorteile-Block */}
         {/* <section className={styles.featureBlock}>
           <div className="container">
             <div className={styles.featureContent}>

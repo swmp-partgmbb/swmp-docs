@@ -1,0 +1,199 @@
+.modelShowcase {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.showcaseTitle {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--ifm-color-primary);
+    text-align: center;
+}
+
+.categorySection {
+    margin-bottom: 4rem;
+}
+
+.categoryTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--ifm-color-primary);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--ifm-color-primary-lighter);
+}
+
+.categoryHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.categoryLogo {
+    height: 40px !important;
+    object-fit: contain;
+    margin-right: 1rem;
+    filter: invert(41%) sepia(89%) saturate(2396%) hue-rotate(2deg) brightness(105%) contrast(106%);
+}
+
+/* Global override for Docusaurus theme images */
+:global(.theme-doc-markdown img) {
+    margin: 0 !important;
+    margin-bottom: 1rem !important;
+    display: inline-block !important;
+}
+
+:global(.markdown img) {
+    margin: 0 !important;
+    margin-bottom: 1rem !important;
+    display: inline-block !important;
+}
+
+.categoryDescription {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary, #475569);
+    max-width: 900px;
+}
+
+.modelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.modelCard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--business-border, #e2e8f0);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.modelCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .modelCard {
+    background-color: var(--dark-theme-card-bg, #040413);
+    border-color: var(--dark-theme-border-color, #2D3748);
+}
+
+.modelHeader {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--business-border, #e2e8f0);
+    display: flex;
+    flex-direction: column;
+}
+
+[data-theme='dark'] .modelHeader {
+    border-color: var(--dark-theme-border-color, #2D3748);
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.modelName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--ifm-color-primary);
+}
+
+.modelDate {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #475569);
+    margin-bottom: 0.75rem;
+}
+
+.modelDescription {
+    font-size: 0.95rem;
+    color: var(--text-primary, #1e293b);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.modelBody {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--ifm-color-primary);
+}
+
+.benchmarkList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.benchmarkItem {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.benchmarkItem:before {
+    content: "•";
+    color: var(--ifm-color-primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.relevanceSection {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-primary, #1e293b);
+}
+
+.pricingSection {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--business-border, #e2e8f0);
+}
+
+[data-theme='dark'] .pricingSection {
+    border-color: var(--dark-theme-border-color, #2D3748);
+}
+
+.priceItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.priceLabel {
+    color: var(--text-secondary, #475569);
+}
+
+.priceValue {
+    font-weight: 500;
+    color: var(--text-primary, #1e293b);
+}
+
+@media (max-width: 768px) {
+    .modelGrid {
+        grid-template-columns: 1fr;
+    }
+}

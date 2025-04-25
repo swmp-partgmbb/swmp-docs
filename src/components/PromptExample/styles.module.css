@@ -1,0 +1,141 @@
+.promptExampleContainer {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--ifm-font-family-base);
+}
+
+.promptDescription {
+  margin-bottom: 1.5rem;
+  font-size: var(--ifm-font-size-base);
+  color: var(--ifm-color-emphasis-700);
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.promptsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .promptsWrapper {
+    flex-direction: column;
+  }
+  
+  .promptArrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+
+.promptBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  margin: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.promptBox:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.promptHeader {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badLabel, .goodLabel {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badLabel {
+  background-color: rgba(235, 94, 85, 0.1);
+  color: #EB5E55;
+}
+
+.goodLabel {
+  background-color: rgba(35, 173, 117, 0.1);
+  color: #23AD75;
+}
+
+.promptContent {
+  padding: 1.25rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.promptContent p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.promptReasons {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.85rem;
+}
+
+.reasonsTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.reasonsList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.reasonsList li {
+  margin-bottom: 0.35rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.reasonsList li:last-child {
+  margin-bottom: 0;
+}
+
+.promptArrow {
+  font-size: 1.8rem;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.copyButton {
+  background: transparent;
+  border: none;
+  color: var(--ifm-color-emphasis-500);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s;
+}
+
+.copyButton:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-200);
+}

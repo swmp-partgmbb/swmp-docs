@@ -165,7 +165,7 @@ html[data-theme='light'] {
   margin-top: 2rem;
 }
 
-/* Стили для блока безопасности */
+/* Styles für den Sicherheitsbereich */
 .securityGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -199,7 +199,7 @@ html[data-theme='light'] {
   line-height: 1.6;
 }
 
-/* Адаптивные стили */
+/* Adaptive Styles */
 @media screen and (max-width: 996px) {
   .featureContent {
     flex-direction: column;
@@ -210,7 +210,7 @@ html[data-theme='light'] {
     min-width: 100%;
   }
   
-  /* Чередование порядка элементов в мобильном представлении */
+  /* Wechselnde Elementreihenfolge in der mobilen Ansicht */
   .alternateBlock .featureContent {
     flex-direction: column-reverse;
   }
@@ -224,7 +224,7 @@ html[data-theme='light'] {
   }
 }
 
-/* Стили для кнопок в светлой/темной теме */
+/* Styles für Buttons in Hell/Dunkel-Thema */
 html[data-theme='light'] .button--primary {
   background-color: var(--primary-color);
   color: white;
@@ -240,7 +240,7 @@ html[data-theme='light'] .button--secondary:hover {
   background-color: rgba(255, 105, 0, 0.1);
 }
 
-/* Анимации появления при прокрутке */
+/* Fade-in-Animationen beim Scrollen */
 .fadeInSection {
   opacity: 0;
   transform: translateY(30px);
@@ -268,7 +268,6 @@ html[data-theme='light'] .button--secondary:hover {
   transform: translateY(0);
 }
 
-/* Разные анимации для чередующихся блоков */
 .slideInLeft {
   opacity: 0;
   transform: translateX(-50px);
@@ -293,7 +292,6 @@ html[data-theme='light'] .button--secondary:hover {
   transform: translateX(0);
 }
 
-/* Анимация для сетки безопасности */
 .scaleIn {
   opacity: 0;
   transform: scale(0.9);
@@ -307,7 +305,6 @@ html[data-theme='light'] .button--secondary:hover {
   transform: scale(1);
 }
 
-/* Добавляем стили для секции безопасности на всю ширину */
 .fullWidthSection .featureContent {
   flex-direction: column;
   align-items: stretch;
@@ -318,15 +315,7 @@ html[data-theme='light'] .button--secondary:hover {
   width: 100%;
 }
 
-/* Расширяем сетку безопасности для полноэкранного режима */
-.securityGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* Адаптивная сетка безопасности для разных размеров экрана */
+/* Responsive Grid für den Sicherheitsbereich */
 @media screen and (min-width: 1200px) {
   .securityGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -345,7 +334,6 @@ html[data-theme='light'] .button--secondary:hover {
   }
 }
 
-/* Добавляем стили для dualImageContainer */
 .dualImageContainer {
   position: relative;
   width: 100%;
@@ -381,7 +369,6 @@ html[data-theme='light'] .button--secondary:hover {
   }
 }
 
-/* Стили для иконок в секции безопасности */
 .securityHeader {
   display: flex;
   align-items: center;
@@ -404,4 +391,145 @@ html[data-theme='dark'] .securityIcon {
   font-size: 1.2rem;
   margin: 0;
   color: var(--primary-color);
+}
+
+/* Styles für KI-Modell-Sektion */
+.aiModelShowcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.aiModelCategory {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.aiModelCategory.isVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.aiModelCategoryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.aiModelCategoryHeader h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 600;
+}
+
+.aiModelCategoryLogo {
+  height: 38px;
+  width: auto;
+  margin-right: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+[data-theme='dark'] .aiModelCategoryLogo {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
+}
+
+.aiModelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.aiModelCard {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.aiModelCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--highlight));
+}
+
+.aiModelCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.aiModelIcon {
+  margin-bottom: 1rem;
+}
+
+.aiModelIcon img {
+  height: 30px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.aiModelContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.aiModelContent p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.aiModelFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aiModelFeatures li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.aiModelFeatures li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .aiModelGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aiModelCategoryHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .aiModelCategoryLogo {
+    margin-bottom: 1rem;
+  }
 }
