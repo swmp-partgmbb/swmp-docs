@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
         {
           name: 'GPT-4.1',
           icon: 'img/logos/openai-logo.svg',
-          description: 'Flaggschiff-Modell mit erweitertem Kontextfenster von bis zu 1 Million Token und verbesserten Reasoning-Fähigkeiten.',
+          description: 'Flaggschiff-Modell mit erweitertem Kontextfenster von bis zu 1 Million Token und die Fähigkeit, das selbe Performance-Level wie Reasoing-Modelle zu erreichen.',
           features: [
             '1M Token Kontextfenster',
             'Verbessertes Verständnis juristischer Dokumente',

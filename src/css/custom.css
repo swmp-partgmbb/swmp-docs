@@ -105,7 +105,6 @@ html[data-theme='dark'] .navbar__link:hover {
   border-radius: 1px;
 }
 
-/* Возможно, добавить тень для тёмной темы */
 html[data-theme='dark'] .navbar__link--active::after {
   box-shadow: 0 0 4px var(--ifm-color-primary-light);
 }

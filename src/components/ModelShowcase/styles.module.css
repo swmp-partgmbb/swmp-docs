@@ -40,13 +40,6 @@
     filter: invert(41%) sepia(89%) saturate(2396%) hue-rotate(2deg) brightness(105%) contrast(106%);
 }
 
-/* Global override for Docusaurus theme images */
-:global(.theme-doc-markdown img) {
-    margin: 0 !important;
-    margin-bottom: 1rem !important;
-    display: inline-block !important;
-}
-
 :global(.markdown img) {
     margin: 0 !important;
     margin-bottom: 1rem !important;
